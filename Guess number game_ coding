@@ -1,0 +1,48 @@
+# Player 1
+import random
+a = random.randint(0,10)
+
+count_a = 0
+while True:
+    b = int(input(" Player 1: "))
+
+    count_a = count_a + 1
+    if b < a:
+        print("Try a greater number  ")
+
+    elif b > a:
+        print(" Try a smaller number  ")
+
+    else:
+        print("That's right! Number of try:", count_a)
+    # if not use break, it will never end
+        break
+    
+    
+# Player 2
+import random
+x = random.randint(0,10)
+
+count_x = 0
+while True:
+    y = int(input(" Player 2: "))
+
+    count_x = count_x + 1
+    if y < x:
+        print("Try a greater number  ")
+
+    elif y > x:
+        print(" Try a smaller number  ")
+
+    else:
+        print("That's right! Number of try:", count_x)
+        break       
+
+# compare the result of the two player
+if count_a > count_x:
+    print (" Dealer 2 win")
+elif count_a < count_x:
+    print(" Dealer 1 win")
+    
+else:
+    print(" Both dealers win!")
